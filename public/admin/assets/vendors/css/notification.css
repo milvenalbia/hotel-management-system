@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+
+.alert-custom{
+  background-color: #0090e7;
+  border-color: rgb(12, 14, 12);
+  padding: 15px 15px;
+  min-width: 420px;
+  position: fixed;
+  right: 0;
+  top: 10px;
+  border-radius: 4px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 9999 !important;
+}
+.alert-custom.showAlert{
+  opacity: 1;
+  pointer-events: auto;
+}
+.alert-custom.show{
+  animation: show_slide 1s ease forwards;
+}
+@keyframes show_slide {
+  0%{
+    transform: translateX(100%);
+  }
+  50%{
+    transform: translateX(-10%);
+  }
+  80%{
+    transform: translateX(0%);
+  }
+  100%{
+    transform: translateX(-10px);
+  }
+}
+.alert-custom.hide{
+  animation: hide_slide 1s ease forwards;
+}
+@keyframes hide_slide {
+  0%{
+    transform: translateX(-10px);
+  }
+  50%{
+    transform: translateX(0%);
+  }
+  80%{
+    transform: translateX(-10%);
+  }
+  100%{
+    transform: translateX(100%);
+  }
+}
+.alert-custom .fa-check-circle{
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgb(4, 250, 21);
+  font-size: 20px;
+}
+
+.alert-custom-message{
+  background-color: #0090e7;
+  border-color: #b3d9f2;
+  padding: 15px 15px;
+  min-width: 420px;
+  position: fixed;
+  right: 0;
+  top: 10px;
+  border-radius: 4px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 9999 !important;
+}
+
+.alert-custom-message.showAlert{
+  opacity: 1;
+  pointer-events: auto;
+}
+.alert-custom-message.show{
+  animation: show_slide 1s ease forwards;
+}
+@keyframes show_slide {
+  0%{
+    transform: translateX(100%);
+  }
+  50%{
+    transform: translateX(-10%);
+  }
+  80%{
+    transform: translateX(0%);
+  }
+  100%{
+    transform: translateX(-10px);
+  }
+}
+.alert-custom-message.hide{
+  animation: hide_slide 1s ease forwards;
+}
+@keyframes hide_slide {
+  0%{
+    transform: translateX(-10px);
+  }
+  50%{
+    transform: translateX(0%);
+  }
+  80%{
+    transform: translateX(-10%);
+  }
+  100%{
+    transform: translateX(100%);
+  }
+}
+
+.alert-custom-message .fa-info-circle {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 20px;
+}
+/* .alert-custom .msg{
+  font-family: "Rubik", sans-serif;
+  margin-left: 10px;
+  padding: 0 20px;
+  font-size: 16px;
+  color: #00d25b;
+} */
+
+

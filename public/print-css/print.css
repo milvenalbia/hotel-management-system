@@ -1,0 +1,101 @@
+
+#tableToPrint {
+    display: none;
+}
+
+#tableToPrint1 {
+    display: none;
+}
+
+#printCheckOut {
+    display: none;
+}
+
+@media print {
+
+    body, html {
+        height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Hide elements not meant for printing */
+    body * {
+        visibility: hidden;
+    }
+
+    #tableToPrint {
+        display: block;
+        width: auto;
+        margin-top: -275px !important;
+        margin-left: -250px !important;
+    }
+
+    #tableToPrint1 {
+        display: block;
+        width: auto;
+        margin-top: -275px !important;
+        margin-left: -250px !important;
+    }
+
+    #printCheckOut, #printCheckOut * {
+        visibility: visible;
+    }
+
+    #printCheckOut {
+        display: block;
+        width: 100%;
+        height: 100vh;
+        background-position: center;
+        background-size: cover;
+        margin-top: 0px !important;
+        margin-left: 10px !important;
+        color: black;
+    }
+
+    #printCheckOut table{
+        color: black;
+    }
+
+    #printCheckOut table th{
+        color: black;
+    }
+    
+    /* Display the table and its content */
+    #tableToPrint, #tableToPrint * {
+        visibility: visible;
+    }
+
+    #tableToPrint1, #tableToPrint1 * {
+        visibility: visible;
+    }
+    
+    /* Set the table to take up the full width of the page */
+
+    #tableToPrint table{
+        width: 100%;
+        color: black;
+    }
+
+    #tableToPrint th{
+        color: black;
+    }
+
+    #tableToPrint1 table{
+        width: 100%;
+        color: black;
+    }
+
+    #tableToPrint1 th{
+        color: black;
+    }
+
+    .page-break {
+        page-break-before: always;
+    }
+
+    .tableToHideInPrint{
+        display: none;
+    }
+}
