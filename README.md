@@ -1,66 +1,189 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Hotel Management System
 
+A comprehensive web application designed to provide hospitality management students with a realistic simulation of hotel operations. This system offers hands-on experience with modern hotel management processes, from reservations to checkout and reporting.
+
+![Hotel Management System Banner](https://i.imgur.com/MPNUafi.jpeg)
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <img src="https://i.imgur.com/ohtqh81.jpeg" width="48%" />
+    &nbsp;
+    &nbsp;
+  <img src="https://i.imgur.com/7ymwpT4.jpeg" width="48%" />
 </p>
 
-## About Laravel
+## 🏨 Overview
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+The Hotel Management System is an educational tool that mimics real-world hotel operations, allowing students to practice and learn essential hospitality management skills in a controlled environment. Each admin account represents an individual hotel, providing students with their own management space.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🛠️ Tech Stack
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- **Backend:** Laravel (PHP Framework)
+- **Frontend:** Livewire (Real-time UI components)
+- **Styling:** Bootstrap (Responsive CSS Framework)
+- **Database:** MySQL
+- **Email:** Laravel Mail (for reservation confirmations)
 
-## Learning Laravel
+## ✨ Features
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Core Functionality
+- **📊 Dashboard** - Comprehensive overview of hotel operations with key metrics
+- **📅 Reservation System** - Complete booking management with automated email confirmations
+- **👥 Guest Management** - Customer information and history tracking
+- **🏠 Room Management** - Room inventory, status, and maintenance tracking
+- **👨‍💼 User Management** - Staff and account administration (Super Admin only)
+- **💳 Checkout/Payment Management** - Billing and payment processing
+- **📈 Generate Reports** - Detailed analytics and operational reports
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### User Roles
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+#### Super Admin (Teacher Role)
+- Full system access
+- Manage all hotels and users
+- Access to all features and reports
+- User management capabilities
+- System-wide oversight
 
-## Laravel Sponsors
+#### Admin (Student Role)
+- Individual hotel management
+- Access to all features except user management
+- Own hotel operations and data
+- Learning-focused environment
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## 📋 Requirements
 
-### Premium Partners
+- PHP >= 8.1
+- Composer
+- Node.js & NPM
+- MySQL >= 5.7
+- Apache/Nginx web server
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+## 🚀 Installation
 
-## Contributing
+### 1. Clone the Repository
+```bash
+git clone https://github.com/yourusername/hotel-management-system.git
+cd hotel-management-system
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 2. Install PHP Dependencies
+```bash
+composer install
+```
 
-## Code of Conduct
+### 3. Install Node.js Dependencies
+```bash
+npm install
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 4. Environment Configuration
+```bash
+# Copy the environment file
+cp .env.example .env
 
-## Security Vulnerabilities
+# Generate application key
+php artisan key:generate
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### 5. Database Setup
+Configure your database settings in the `.env` file:
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=your_database_name
+DB_USERNAME=your_username
+DB_PASSWORD=your_password
+```
 
-## License
+Create the database:
+```bash
+# Create database (MySQL)
+mysql -u root -p
+CREATE DATABASE hotel_management;
+exit
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### 6. Run Database Migrations
+```bash
+php artisan migrate
+```
+
+### 7. Configure Email Settings
+Update your `.env` file with email configuration:
+```env
+MAIL_MAILER=smtp
+MAIL_HOST=your-smtp-host
+MAIL_PORT=587
+MAIL_USERNAME=your-email@example.com
+MAIL_PASSWORD=your-email-password
+MAIL_ENCRYPTION=tls
+MAIL_FROM_ADDRESS=your-email@example.com
+MAIL_FROM_NAME="${APP_NAME}"
+```
+
+### 8. Build Frontend Assets
+```bash
+npm run build
+```
+
+### 9. Storage Link
+```bash
+php artisan storage:link
+```
+
+### 10. Start the Development Server
+```bash
+php artisan serve
+```
+
+The application will be available at `http://localhost:8000`
+
+### Getting Started
+1. Login with your assigned role
+2. Explore the dashboard for system overview
+3. Set up rooms and room types
+4. Configure hotel settings
+5. Start managing reservations and guests
+
+## 🎯 Educational Objectives
+
+This system helps students learn:
+- Hotel reservation systems
+- Guest relationship management
+- Room inventory management
+- Financial reporting and analytics
+- Customer service workflows
+- Multi-user system administration
+
+## 🛡️ Security Features
+
+- Role-based access control
+- Secure authentication
+- Data encryption
+- SQL injection protection
+- XSS prevention
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🆘 Support
+
+For support and questions:
+- Create an issue in the GitHub repository
+- Contact the development team
+
+## 📞 Contact
+
+Project Link: [https://github.com/milvenalbia/hotel-management-system](https://github.com/milvenalbia/hotel-management-system)
+
+---
+
+**Note:** This is an educational project designed for learning purposes. Always follow your institution's guidelines and policies when using this system.
